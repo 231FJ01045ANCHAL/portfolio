@@ -1,216 +1,413 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explore Bihar</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- AOS CSS for animation on scroll -->
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <style>
-        body {
-            position: relative;
-        }
-        .carousel img {
-            height: 580px;
-            object-fit: cover;
-        }
-        section {
-            padding: 80px 0;
-        }
-        .navbar {
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        #destinations .card {
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-        #destinations .card-body {
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-        }
-        #destinations .card-body .btn {
-            margin-top: auto;
-        }
-        #destinations .card-img-top {
-            height: 200px;
-            object-fit: cover;
-            width: 100%;
-            border-radius: 5px;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Irfan Sayyad</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <link href="assets/img/logo.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+ 
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+
+  <link href="assets/css/style.css" rel="stylesheet">
+
+ 
 </head>
-<body data-bs-spy="scroll" data-bs-target="#navbarScrollSpy" data-bs-offset="70" tabindex="0">
-    <!-- Navbar -->
-    <nav id="navbarScrollSpy" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">Explore Bihar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#about-us">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#destinations">Destinations</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact-us">Contact Us</a></li>
-                </ul>
-            </div>
-        </div>
+
+<body>
+
+  
+  <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+  <header id="header" class="d-flex flex-column justify-content-center">
+
+    <nav class="nav-menu">
+      <ul>
+        <li class="active"><a href="#hero"><i class="bx bx-home"></i> <span>Home</span></a></li>
+        <li><a href="#about"><i class="bx bx-user"></i> <span>About</span></a></li>
+        <li><a href="#resume"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+        <li><a href="#services"><i class="bx bx-server"></i> <span>Services</span></a></li>
+        <li><a href="#contact"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+      </ul>
     </nav>
 
-    <!-- Carousel -->
-    <div id="destinationCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="https://cdn.getyourguide.com/img/tour/22ae120b04efeac6ffafc38061428d8517a1e3b7730763474307f23439fbff2f.jpg/146.jpg" class="d-block w-100" alt="Bodh Gaya">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Bodh Gaya</h5>
-                    <p>The place where Lord Buddha attained enlightenment.</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="https://miro.medium.com/v2/resize:fit:1024/1*mahqN0AcNuNnGAsClUYwQQ.jpeg" class="d-block w-100" alt="Nalanda">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Nalanda</h5>
-                    <p>Explore the ruins of the ancient Nalanda University.</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="https://biharportalonline.com/wp-content/uploads/2024/09/Glass-Bridge-Ticket-Counter-Rajgir-Tickets-Timings-Price.webp" class="d-block w-100" alt="Rajgir">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Rajgir</h5>
-                    <p>Known for its hot springs and ancient Buddhist sites.</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="https://i.ytimg.com/vi/pz_9CyGGOdo/maxresdefault.jpg" class="d-block w-100" alt="Valmiki National Park">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Valmiki National Park</h5>
-                    <p>Home to tigers, leopards, and a stunning range of biodiversity.</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="https://s7ap1.scene7.com/is/image/incredibleindia/gol-ghar-patna-bihar-1-attr-hero?qlt=82&ts=1726740340434" class="d-block w-100" alt="Gol Ghar">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Gol Ghar</h5>
-                    <p>An iconic granary offering panoramic views of Patna.</p>
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#destinationCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#destinationCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
+  </header>
+  <section id="hero" class="d-flex flex-column justify-content-center">
+    <div class="container" data-aos="zoom-in" data-aos-delay="100">
+      <h1>Irfan Sayyad</h1>
+      <p>I'm a <span class="typed" data-typed-items="Web Developer,Data Analyst,Python Developer"></span></p>
+      <br>
+      <div class="social-links">
+        <a href="https://instagram.com/irfansayyad.9494?igshid=bHNqaWVqYjVqZm8w" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/irfan-sayyad-a79b5325b" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
     </div>
+  </section>
 
-    <!-- About Us Section -->
-    <section id="about-us" class="bg-light">
-        <div class="container">
-            <h2 class="text-center" data-aos="fade-up">About Us</h2>
-            <p class="text-center" data-aos="fade-up" data-aos-delay="200">Discover the cultural and historical treasures of Bihar. From the enlightenment of Buddha in Bodh Gaya to the ancient wisdom of Nalanda, Bihar offers a journey through history, spirituality, and natural beauty.</p>
+  <main id="main">
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>About</h2>
+                <p>Seek a challenging role at a distinguished organization to leverage skills, training,
+                  and strengths to contribute to organizational growth while embracing opportunities for professional and personal development.
+                  Motivated and results-oriented software developer and data analyst with a passion for leveraging technology to solve complex problems and drive business value.</p>
         </div>
-    </section>
 
-    <!-- Destinations Section -->
-    <section id="destinations">
-        <div class="container">
-            <h2 class="text-center" data-aos="fade-up">Destinations</h2>
-            <div class="row mt-4">
-                <!-- Bodh Gaya -->
-                <div class="col-md-4 mb-4" data-aos="fade-up">
-                    <div class="card">
-                        <img src="https://memorymuseum.net/wp-content/uploads/2020/04/bodh-gaya-1.jpg" class="card-img-top" alt="Bodh Gaya">
-                        <div class="card-body">
-                            <h5 class="card-title">Bodh Gaya</h5>
-                            <p class="card-text">Visit the Mahabodhi Temple, a UNESCO World Heritage Site.</p>
-                            <button class="btn btn-primary" onclick="alert('Bodh Gaya is where Lord Buddha attained enlightenment under the Bodhi tree. The Mahabodhi Temple is a must-visit for spiritual seekers.')">More Info</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Nalanda -->
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card">
-                        <img src="https://preview.redd.it/new-nalanda-university-campus-most-depressing-looking-v0-6hrkyul0zee81.png?width=640&crop=smart&auto=webp&s=0361c9b04655441765251cbb0589c92b33be57a7" class="card-img-top" alt="Nalanda">
-                        <div class="card-body">
-                            <h5 class="card-title">Nalanda</h5>
-                            <p class="card-text">Explore the ancient ruins of Nalanda University.</p>
-                            <button class="btn btn-primary" onclick="alert('Nalanda was one of the greatest centers of learning in ancient times. It is a treasure trove for history enthusiasts.')">More Info</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Rajgir -->
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card">
-                        <img src="https://www.trawell.in/admin/images/upload/125543521Rajgir_Vishwa_Shanti_Stupa_Main.jpg" class="card-img-top" alt="Rajgir">
-                        <div class="card-body">
-                            <h5 class="card-title">Rajgir</h5>
-                            <p class="card-text">Enjoy the hot springs and visit ancient Buddhist monasteries.</p>
-                            <button class="btn btn-primary" onclick="alert('Rajgir is famous for its hot springs, Vishwa Shanti Stupa, and its role in Buddhist history.')">More Info</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Kanwar Lake -->
-                <div class="col-md-4 mb-4" data-aos="fade-up">
-                    <div class="card">
-                        <img src="https://i.ytimg.com/vi/79f-OpGnxuM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBzmuGdBZxm3V9CyCgii2NBXt4GLw" class="card-img-top" alt="Kanwar Lake">
-                        <div class="card-body">
-                            <h5 class="card-title">Kanwar Lake</h5>
-                            <p class="card-text">Experience the serene beauty of Asia's largest freshwater oxbow lake.</p>
-                            <button class="btn btn-primary" onclick="alert('Kanwar Lake is a haven for bird watchers and nature enthusiasts, offering a tranquil retreat.')">More Info</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Valmiki National Park -->
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card">
-                        <img src="https://media2.thrillophilia.com/images/photos/000/365/075/original/1630538396_WILDLIFE_WEST_CHAMPARAN_CATEGORY_A_VALMIKI_TIGER_RESERVE_PIC_08.JPG?" class="card-img-top" alt="Valmiki National Park">
-                        <div class="card-body">
-                            <h5 class="card-title">Valmiki National Park</h5>
-                            <p class="card-text">Explore the rich biodiversity of this tiger reserve.</p>
-                            <button class="btn btn-primary" onclick="alert('Valmiki National Park is a pristine wildlife sanctuary with diverse flora and fauna, perfect for nature lovers.')">More Info</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Gol Ghar -->
-                <div class="col-md-4 mb-4" data-aos="fade-up">
-                    <div class="card">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Golghar_%E0%A5%AA.jpg/250px-Golghar_%E0%A5%AA.jpg" class="card-img-top" alt="Gol Ghar">
-                        <div class="card-body">
-                            <h5 class="card-title">Gol Ghar</h5>
-                            <p class="card-text">An iconic granary offering panoramic views of Patna.</p>
-                            <button class="btn btn-primary" onclick="alert('Gol Ghar, built in 1786, is an architectural marvel and offers a spectacular view of the city and the Ganges.')">More Info</button>
-                        </div>
-                    </div>
-                </div>
+        <div class="row">
+          <div class="col-lg-4">
+            <img src="assets/img/mine.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-8 pt-4 pt-lg-0 content">
+            <h3>Software Engineer</h3>
+            <p class="font-italic">
+              I am an Aspiring Software Engineer who loves to Play with Technology, Learn and Develop New skills,
+              Passionate about Data analytics, Artificial intelligence, machine learning.. I am Hardworking, Dedicated and Determined.
+            </p>
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="icofont-rounded-right"></i> <strong>Birthday:</strong>19-june-2000</li>
+                  <!-- <li><i class="icofont-rounded-right"></i> <strong>Website:</strong> www.example.com</li> -->
+                  <li><i class="icofont-rounded-right"></i> <strong>Phone:</strong> 91-9849191451</li>
+                  <li><i class="icofont-rounded-right"></i> <strong>City:</strong>Suddapalli,Andhra Pradesh-522213</li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="icofont-rounded-right"></i> <strong>Age:</strong> 23</li>
+                  <li><i class="icofont-rounded-right"></i> <strong>Degree:</strong> MCA(2024 Batch)</li>
+                  <li><i class="icofont-rounded-right"></i> <strong>Email:</strong>irfansayyad.9494@gmail.com</li>
+                </ul>
+              </div>
             </div>
+            <p>
+              
+            </p>
+          </div>
         </div>
+
+      </div>
+    </section>
+    <section id="skills" class="skills section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Skills</h2>
+          <p>I have been working in the below mentioned skills for over 2+ years and I am still Learning More and More.</p>
+        </div>
+
+        <div class="row skills-content">
+
+          <div class="col-lg-6">
+
+            <div class="progress">
+              <span class="skill">HTML <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">CSS <i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">JavaScript <i class="val">60%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6">
+
+            <div class="progress">
+              <span class="skill">Python <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">SQL <i class="val">85%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="progress">
+              <span class="skill">Power Bi<i class="val">60%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+
+            <div class="progress">
+              <span class="skill">Java <i class="val">70%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            </div>
+            <div class="col-lg-6">
+            <div class="progress">
+              <span class="skill">Machine Learning <i class="val">70%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            </div>
+
+      </div>
+    </section>
+    <section id="resume" class="resume">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Resume</h2>
+          <p>| WEB DEVELOPER | Python Programmer | MCA 2<sup>nd</sup>year in Vignan's Foundation for Science,Technology & Research (Deemed to be University),Guntur |</p>
+          <p> Keeping myself busy in getting strong at Data Analysis And AI & ML Concepts.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <h3 class="resume-title">Summary</h3>
+            <div class="resume-item pb-0">
+              <h4>Irfan Sayyad</h4>
+              <p><em>Innovative and deadline-driven Developer with 1+ years of experience designing and developing websites &Analysing the Data. </em></p>
+              <ul>
+                <li>Suddapalli, Andhra Pradesh-522213, India</li>
+                <li>91-9849191451</li>
+                <li>irfansayyad.9494@gmail.com</li>
+              </ul>
+            </div>
+
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>Master of Computer Application</h4>
+              <h5>2022-2024</h5>
+              <p><em>Vignan's Foundation for Science, 
+                Technology & Research (Deemed to be University),Guntur</em></p>
+              <p><strong>CGPA: 8.63</strong></p>
+            </div>
+            <div class="resume-item">
+              <h4>Bachelor of Science</h4>
+              <h5>2017-2020</h5>
+              <p><em>Career Degree College,Guntur</em></p>
+              <p><strong>CGPA: 7.99</strong></p>
+            </div>
+            <div class="resume-item">
+              <h4>Intermediate</h4>
+              <h5>2015-2017</h5>
+              <p><em>Sri Chaitanya Junior College
+              Guntur, Andhra Pradesh</em></p>
+              <p><strong>Marks:- 907</strong></p>
+            </div>
+            <div class="resume-item">
+              <h4>Matriculation</h4>
+              <h5>2015</h5>
+              <p><em>ZPH School
+              Vejendala, Andhra Pradesh</em></p>
+              <p><strong>CGPA: 8.3</strong></p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <h3 class="resume-title">Professional Experience</h3>
+            <div class="resume-item">
+              <h4>Front-End Development Intern (Skill Vertex)</h4>
+              <h5>March 2023 - June 2023</h5>
+              <p><em>Guntur, Andhra Pradesh, India</em></p>
+              <ul>
+              <li>Completed certification on Frontend Web Development basics.</li>
+              <li>During training gained knowledge on basic of javascript , CSS and HTML</li>
+              </ul>
+            </div>
+              <h3 class="resume-title">ACCOMPLISHMENTS</h3>
+              <div class="resume-item">
+
+                <ul>
+                  <li>Working in-Person Faculty Buildathon:Cloud App Developments
+                      with Red Hat Opeenshift (IBM Skills Build)</li>
+                  <li>Data Visualization: Empowering Business with
+                  Effective Insights (TATA)</li>
+                  <li>Participated Hackthon 24 Challange in VFSTR </li>
+                  <li>Overjoyed to have garnered first prize in the short film contest.</li>
+                </ul>
+              </div>
+              <h3 class="resume-title">Projects</h3>
+              <div class="resume-item">
+
+                <ul>
+                  <li>
+                Developed a project on Online Tours And Travels<br>
+                Technologies used: HTML,CSS,JavaScript.</li>
+                <li>
+                  Developed a project on Agri Expert<br>
+                  Technologies used: Python,Machine Learning.</li>
+                  <li>
+                    Developed a project on Fingerprint Match Making<br>
+                    Technologies used: Python,Machine Learning,Deep Learning.</li>
+                    <li>
+                      Developed a project on Feed Homeless<br>
+                      Technologies used: HTML,CSS,JavaScript.</li>
+                </ul>
+              </div>
+          </div>
+         
+        </div>
+
+      </div>
+    </section>
+    <section id="services" class="services">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Services</h2>
+          <p>I have handful amount of experience in Web Development & Data Analysing. </p>
+        </div>
+
+        <div class="row d-flex justify-content-center w-100" >
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-box iconbox-blue">
+              <div class="icon">
+                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,521.0016835830174C376.1290562159157,517.8887921683347,466.0731472004068,529.7835943286574,510.70327084640275,468.03025145048787C554.3714126377745,407.6079735673963,508.03601936045806,328.9844924480964,491.2728898941984,256.3432110539036C474.5976632858925,184.082847569629,479.9380746630129,96.60480741107993,416.23090153303,58.64404602377083C348.86323505073057,18.502131276798302,261.93793281208167,40.57373210992963,193.5410806939664,78.93577620505333C130.42746243093433,114.334589627462,98.30271207620316,179.96522072025542,76.75703585869454,249.04625023123273C51.97151888228291,328.5150500222984,13.704378332031375,421.85034740162234,66.52175969318436,486.19268352777647C119.04800174914682,550.1803526380478,217.28368757567262,524.383925680826,300,521.0016835830174"></path>
+                </svg>
+                <i class="bx bxl-dribbble"></i>
+              </div>
+              <h4><a href="">Front End Development</a></h4>
+              <p>HTML5, CSS3, JavaScript</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
+            <div class="icon-box iconbox-pink">
+              <div class="icon">
+                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,541.5067337569781C382.14930387511276,545.0595476570109,479.8736841581634,548.3450877840088,526.4010558755058,480.5488172755941C571.5218469581645,414.80211281144784,517.5187510058486,332.0715597781072,496.52539010469104,255.14436215662573C477.37192572678356,184.95920475031193,473.57363656557914,105.61284051026155,413.0603344069578,65.22779650032875C343.27470386102294,18.654635553484475,251.2091493199835,5.337323636656869,175.0934190732945,40.62881213300186C97.87086631185822,76.43348514350839,51.98124368387456,156.15599469081315,36.44837278890362,239.84606092416172C21.716077023791087,319.22268207091537,43.775223500013084,401.1760424656574,96.891909868211,461.97329694683043C147.22146801428983,519.5804099606455,223.5754009179313,538.201503339737,300,541.5067337569781"></path>
+                </svg>
+                <i class="bx bx-data"></i>
+              </div>
+              <h4><a href="">Data Analyst & Software Developer</a></h4>
+              <p>Python<p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+        </div>
+
+        <div class="row mt-1 offset-lg-1">
+
+          <div class="col-lg-4">
+            <div class="info">
+              <span class="address">
+                <i class="icofont-google-map"></i>
+                <h4>Location:</h4>
+                <p>Suddapalli, Andhra Pradesh, India</p>
+              </span>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="info">
+              <span class="email">
+                <i class="icofont-envelope"></i>
+                <h4>Email:</h4>
+                <p>irfansayyad.9494@gmail.com</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="info">
+              <span class="phone">
+                <i class="icofont-phone"></i>
+                <h4>Call:</h4>
+                <p>+91 9849191451</p>
+              </span>
+            </div>
+          </div>
+
+          </div>
+          <br><br>
+          <div class="row">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div class="offset-lg-5">
+              <form action="mailto:irfansayyad.9494@gmail.com" method="POST" enctype="multipart/form-data">
+                    <div class="text-center"><input type="submit" class="btn btn-primary" value="Send Message"></div><br>
+              </form>
+              <div class="text-center"><a href="./assets/perfect_resume.pdf" download><input type="submit" class="btn btn-primary" value="Download CV"></a></div>
+          </div>
+          </div>
+
+        </div>
+
+      </div>
     </section>
 
-    <!-- Contact Us Section -->
-    <section id="contact-us" class="bg-light">
-        <div class="container">
-            <h2 class="text-center" data-aos="fade-up">Contact Us</h2>
-            <p class="text-center" data-aos="fade-up" data-aos-delay="200">Email us at <a href="mailto:info@explorebihar.com">info@explorebihar.com</a> or call us at 9523659003</p>
-        </div>
-    </section>
+  </main>
+  <footer id="footer">
+    <div class="container">
+      <h3>Irfan Sayyad</h3>
+      <p>Lets Learn, Earn With Technology.</p>
+      <div class="social-links">
+        <a href="https://instagram.com/irfansayyad.9494?igshid=bHNqaWVqYjVqZm8w" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/irfan-sayyad-a79b5325b" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+      <div class="copyright">
+        &copy; Copyright <strong><span>Irfan Sayyad</span></strong>. All Rights Reserved
+      </div>
+      <div class="center">
+        Made with CSS
+      </div>
+    </div>
+  </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- AOS JS for scroll animations -->
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 1000,
-            easing: 'ease-out-back',
-            once: true
-        });
-    </script>
+  <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
+  <div id="preloader"></div>
+
+
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="assets/vendor/counterup/counterup.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <script src="assets/js/main.js"></script>
+
 </body>
+
 </html>
